@@ -39,22 +39,22 @@
       <div class="copy">
         <p class="eyebrow">Acceso privado · Masterclass de perfeccionamiento</p>
         <h1 id="titulo-principal">Bienvenida a tu <span>Masterclass Efecto Polvo</span></h1>
-        <p class="intro">Aquí podrás volver a ver el entrenamiento completo en piel sintética. Ingresa la contraseña entregada a las participantes para acceder a la grabación.</p>
+        <p class="intro">Aquí podrás volver a ver el entrenamiento completo en piel sintética. Ingresa el mismo correo con el que te registraste para acceder a la grabación.</p>
 
         <div class="access-card" id="accessCard">
-          <h2>Ingresa tu contraseña</h2>
-          <p>Este contenido es exclusivo para participantes de la Masterclass.</p>
+          <h2>Ingresa tu correo de acceso</h2>
+          <p>Solo los correos registrados en la Masterclass pueden desbloquear este contenido.</p>
           <form id="accessForm">
             <div class="access-row">
-              <input id="accessPassword" type="password" autocomplete="current-password" placeholder="Contraseña de acceso" required />
+              <input id="accessEmail" type="email" autocomplete="email" inputmode="email" placeholder="tuemail@gmail.com" required />
               <button type="submit">Entrar a la Masterclass →</button>
             </div>
             <div class="access-error" id="accessError"></div>
           </form>
-          <p class="private-note">Por favor, no compartas la contraseña ni el contenido de esta clase.</p>
+          <p class="private-note">El acceso es personal. Por favor, no compartas el contenido de esta clase.</p>
         </div>
 
-        <div class="access-ok" id="accessOk">● Acceso autorizado. Ya puedes reproducir la Masterclass.</div>
+        <div class="access-ok" id="accessOk">● Correo autorizado. Ya puedes reproducir la Masterclass.</div>
       </div>
     </div>
 
@@ -70,10 +70,11 @@
 </main>
 
 <script>
-const EXPECTED_HASH='fc933d07c06823877a751221abfde56f604e5c42d5880203bce7abc376062cc6';
+const AUTHORIZED_HASHES=["91fc293c27564de909087a03f58f934406d98e12376b3ff7ae7c35072afd1d45","d718a19d3edb96758d42d407a383960bffb6259c08450c3a16a7fe14b8595ce6","675d69d51fd8f62adb4147d2e524bd13e88596de370fe570eba6f96a5249568c","c4b8a88fab0b9bcb6fdb79ad9370fb7b683dffb9c3fe3d01a14ac6ec59e416f0","9831ebb15c4abf672ba694fe0439cdc8330baa5ceaaa8c5be366b87e4db6d19a","b64887d48fe7a1e446656caf8905c8f2781a17d6c58f8235a5d106c1c0d52968","6864656397982e1a60c9ab8a784afab184cb25163600fac3bdf46da616d0e653","9e37accc64df720d3a4f88b107879b4740d5f189b890f524de6c8b3d5651490f","de46a5abe33e3335cc67f1a8367b39d8853841543eca22cf9701f20db4433e37","d7ee5afbcabeaf1ef585c2773a1650323e330087f650bfb3c4a1d42f93bb7993","3976c479561ac5e9fd3fa0e2be06bb6b4e233878e31056320963ccdb93414ac7","c5cc2855270b5f7c87428baf57b093a27b7d6ddc841b6cb9e5a440ca3fd5bbb8","aa58ea42d57fc1bd827333e907868453c6794c0fbc66fedb05278f6565ba55bf","54866815603a198af4d5d54b7b5f96b8f9cfe1efd848b38df03e749997111c82","054420e1ca0c812dc182519cc5cd283f47b9f145e6f4c524d016f8789528049d","2e41d618bd7b07bfb78ce86aab02d0998296712af655f3f1bad6b2d53e08f8b7","b90c3ae17cb3ee9a9fd3afae714a50d13d0721bf30eb3c94daf77d45d4e445c4","6c5a89ad190d41be36b93aea348a1f4fc908e6d9c89cc0ea8ef2a24ad34fe51e","675ee74683ac569df74aa309af35c7647405f2b1f0a5ca83734c5a160b214f24","58728d888b77e8a34ce90df96cb4cb5a3d79c49e9fded1802b9e3dce45ad73b1","8ec033af92b16fa0b0deb2f6f612bf80d509f71333d854ccda47387d5753c9f8","fd25845f5dfad1a5dd2f83f85d49ff67dbb9f56a99f5be77a25e39253cf34a45","bdbab5841be0b6e2a38429aa6548b70b547f7f2a2bba1a911882fb53c8340810","05221094b9394e3aed142c5b2210f7fa5a818b9c343fed553fee56df85af832e","de192c5586b21e34c8378905e7c4e83b3722dd33d349d5f3fb5777cdfce9734f","29a42f074eae3e4129171ae9b96ebfff24a4e51be3f0903b5f852b585b698256","c29552d725c667fc17ebada3d4abaebcd3789562a4c06b53805d3b87bf2c567b","ac4bff259e2c76db65e8ac0b68c6ef358da4745fcb322545b0e04aa4b4388cb5","28aeb4753a077e1bf76ad5b1d60052c63e36e8bd419b1e4d4a6badfcbbe93d04","174799e981ac37509b62924072ca5419e7f526701816d65c9e695c04ab899cbb","65d0ad417fbc11fb916c0ef7e97a159438e466cfb318780168eb745379ec746e","d529cca398f608d4e0115c8b6f838ca676a15467a4e9ccfc2ffc9de5890df0ce","c833c6278857785b762aee0cc1650a0fef4a20c8e9b1090ada60f6b12ea2557b","ff3b2ec50d62b494b1376700c01c7c00b573f3bc17085ebe21a3bce6c2af3531","23cca04584513e9853d80d28780ff0a7f1918e53d8ebc0e50214f66fa1622947","f50dbd097a5003a2fb1630db9b50ecbb51d70284ecaa70c104475a51ce6efbfc"];
 const VIDEO_ID='PMo5hUXUPHo';
+const SITE_ORIGIN='https://masterclassefectopolvo-wnra.vercel.app';
 const form=document.getElementById('accessForm');
-const input=document.getElementById('accessPassword');
+const input=document.getElementById('accessEmail');
 const error=document.getElementById('accessError');
 const card=document.getElementById('accessCard');
 const ok=document.getElementById('accessOk');
@@ -92,15 +93,23 @@ function unlock(){
   ok.style.display='block';
   imageFrame.classList.add('hidden');
   videoFrame.classList.remove('hidden');
-  videoFrame.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+VIDEO_ID+'?rel=0&modestbranding=1&playsinline=1" title="Masterclass Efecto Polvo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+  videoFrame.innerHTML='';
+  const iframe=document.createElement('iframe');
+  iframe.src='https://www.youtube-nocookie.com/embed/'+VIDEO_ID+'?rel=0&playsinline=1&origin='+encodeURIComponent(SITE_ORIGIN);
+  iframe.title='Masterclass Efecto Polvo';
+  iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  iframe.referrerPolicy='strict-origin-when-cross-origin';
+  iframe.allowFullscreen=true;
+  videoFrame.appendChild(iframe);
   badge.innerHTML='<strong>PLAY</strong><span>Masterclass</span>';
 }
 form.addEventListener('submit',async(e)=>{
   e.preventDefault();
   error.textContent='';
-  const hash=await sha256(input.value.trim());
-  if(hash===EXPECTED_HASH){unlock();}
-  else{error.textContent='Contraseña incorrecta. Verifica e intenta nuevamente.';input.select();}
+  const normalized=input.value.trim().toLowerCase();
+  const hash=await sha256(normalized);
+  if(AUTHORIZED_HASHES.includes(hash)){unlock();}
+  else{error.textContent='Este correo no está autorizado para acceder a esta Masterclass.';input.select();}
 });
 if(sessionStorage.getItem('pmu_masterclass_access')==='ok'){unlock();}
 </script>

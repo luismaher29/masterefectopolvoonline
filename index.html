@@ -1,58 +1,108 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Entrenamiento online de Efecto Polvo en piel sintética. 25 de septiembre, 4 horas, USD $25." />
-    <meta property="og:title" content="Entrenamiento Online: Efecto Polvo" />
-    <meta property="og:description" content="Perfecciona tu técnica en piel sintética. 25 de septiembre · 4 horas · USD $25." />
-    <meta property="og:type" content="website" />
-    <title>Entrenamiento Efecto Polvo | Verónica PMU</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main>
-      <section class="hero" aria-labelledby="titulo-principal">
-        <div class="glow glow-one"></div>
-        <div class="glow glow-two"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="description" content="Acceso privado a la Masterclass de Efecto Polvo de Verónica PMU." />
+  <title>Masterclass Efecto Polvo | Verónica PMU</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .access-card{max-width:620px;margin-top:28px;padding:22px;border:1px solid rgba(255,255,255,.13);border-radius:20px;background:rgba(255,255,255,.05);backdrop-filter:blur(10px)}
+    .access-card h2{margin:0 0 8px;font-family:Georgia,serif;font-size:27px;font-weight:400}
+    .access-card p{color:#a99599;font-size:13px;line-height:1.5}
+    .access-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:16px}
+    .access-row input{min-height:54px;padding:0 18px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(8,6,7,.78);color:#fff;outline:none}
+    .access-row button{min-height:54px;padding:0 26px;border:0;border-radius:999px;background:linear-gradient(135deg,#ff6a6e,#ff2f65);color:#fff;font-weight:800;cursor:pointer}
+    .access-error{min-height:18px;margin:8px 4px 0;color:#ff9ba0;font-size:12px}
+    .private-note{margin-top:12px!important;color:#7f7073!important;font-size:11px!important}
+    .video-frame{position:absolute;inset:24px 28px 24px 0;overflow:hidden;border-radius:34px;background:#050505}
+    .video-frame iframe{width:100%;height:100%;border:0}
+    .access-ok{display:none;max-width:620px;margin-top:28px;padding:16px 18px;border:1px solid rgba(255,255,255,.13);border-radius:18px;background:rgba(255,255,255,.05);color:#cdbfc1;font-size:13px}
+    .hidden{display:none!important}
+    @media(max-width:900px){.video-frame{inset:0 18px 18px}}
+    @media(max-width:590px){.access-row{grid-template-columns:1fr}.access-row button{width:100%}}
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero" aria-labelledby="titulo-principal">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
 
-        <div class="hero-content">
-          <header class="brand">
-            <span class="brand-mark" aria-hidden="true">V</span>
-            <span>Verónica PMU</span>
-          </header>
+    <div class="hero-content">
+      <header class="brand">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span>Verónica PMU</span>
+      </header>
 
-          <div class="copy">
-            <p class="eyebrow">Entrenamiento intensivo · Cupos limitados</p>
-            <h1 id="titulo-principal">Domina el <span>Efecto Polvo</span> en piel sintética</h1>
-            <p class="intro">Perfecciona tus maniobras, el control del pigmento y las transiciones para lograr resultados más limpios, suaves y profesionales.</p>
+      <div class="copy">
+        <p class="eyebrow">Acceso privado · Masterclass de perfeccionamiento</p>
+        <h1 id="titulo-principal">Bienvenida a tu <span>Masterclass Efecto Polvo</span></h1>
+        <p class="intro">Aquí podrás volver a ver el entrenamiento completo en piel sintética. Ingresa la contraseña entregada a las participantes para acceder a la grabación.</p>
 
-            <div class="details" aria-label="Detalles del entrenamiento">
-              <div class="detail"><span>Fecha</span><strong>25 de septiembre</strong></div>
-              <div class="detail"><span>Modalidad</span><strong>100% online</strong></div>
-              <div class="detail"><span>Duración</span><strong>4 horas</strong></div>
-              <div class="detail"><span>Inversión</span><strong>USD $25</strong></div>
+        <div class="access-card" id="accessCard">
+          <h2>Ingresa tu contraseña</h2>
+          <p>Este contenido es exclusivo para participantes de la Masterclass.</p>
+          <form id="accessForm">
+            <div class="access-row">
+              <input id="accessPassword" type="password" autocomplete="current-password" placeholder="Contraseña de acceso" required />
+              <button type="submit">Entrar a la Masterclass →</button>
             </div>
-
-            <a class="primary-button" href="https://wa.me/573223901686?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20entrenamiento%20online%20de%20Efecto%20Polvo" target="_blank" rel="noopener noreferrer">
-              Quiero más información <span aria-hidden="true">↗</span>
-            </a>
-            <p class="microcopy">Te atenderé personalmente por WhatsApp.</p>
-          </div>
+            <div class="access-error" id="accessError"></div>
+          </form>
+          <p class="private-note">Por favor, no compartas la contraseña ni el contenido de esta clase.</p>
         </div>
 
-        <div class="visual">
-          <div class="image-frame">
-            <img src="efecto-polvo.jpeg" alt="Entrenamiento de cejas efecto polvo sobre piel sintética" />
-          </div>
-          <div class="online-badge"><strong>100%</strong><span>Online</span></div>
-          <p class="technique-line">Ritmos · Maniobras · Saturación</p>
-        </div>
-      </section>
+        <div class="access-ok" id="accessOk">● Acceso autorizado. Ya puedes reproducir la Masterclass.</div>
+      </div>
+    </div>
 
-      <a class="floating-whatsapp" href="https://wa.me/573223901686?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20entrenamiento%20online%20de%20Efecto%20Polvo" target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp">
-        <span aria-hidden="true">✦</span> WhatsApp
-      </a>
-    </main>
-  </body>
+    <div class="visual">
+      <div class="image-frame" id="imageFrame">
+        <img src="efecto-polvo.jpeg" alt="Masterclass de cejas efecto polvo sobre piel sintética" />
+      </div>
+      <div class="video-frame hidden" id="videoFrame"></div>
+      <div class="online-badge" id="badge"><strong>100%</strong><span>Online</span></div>
+      <p class="technique-line">Ritmos · Maniobras · Saturación</p>
+    </div>
+  </section>
+</main>
+
+<script>
+const EXPECTED_HASH='fc933d07c06823877a751221abfde56f604e5c42d5880203bce7abc376062cc6';
+const VIDEO_ID='PMo5hUXUPHo';
+const form=document.getElementById('accessForm');
+const input=document.getElementById('accessPassword');
+const error=document.getElementById('accessError');
+const card=document.getElementById('accessCard');
+const ok=document.getElementById('accessOk');
+const imageFrame=document.getElementById('imageFrame');
+const videoFrame=document.getElementById('videoFrame');
+const badge=document.getElementById('badge');
+
+async function sha256(text){
+  const data=new TextEncoder().encode(text);
+  const hash=await crypto.subtle.digest('SHA-256',data);
+  return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+function unlock(){
+  sessionStorage.setItem('pmu_masterclass_access','ok');
+  card.style.display='none';
+  ok.style.display='block';
+  imageFrame.classList.add('hidden');
+  videoFrame.classList.remove('hidden');
+  videoFrame.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+VIDEO_ID+'?rel=0&modestbranding=1&playsinline=1" title="Masterclass Efecto Polvo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+  badge.innerHTML='<strong>PLAY</strong><span>Masterclass</span>';
+}
+form.addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  error.textContent='';
+  const hash=await sha256(input.value.trim());
+  if(hash===EXPECTED_HASH){unlock();}
+  else{error.textContent='Contraseña incorrecta. Verifica e intenta nuevamente.';input.select();}
+});
+if(sessionStorage.getItem('pmu_masterclass_access')==='ok'){unlock();}
+</script>
+</body>
 </html>
